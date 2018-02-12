@@ -16,7 +16,7 @@ all:
 clean:
 	rm -rf build
 	rm -rf dist
-	rm -rf numberwang.egg-info
+	rm -rf hello1234.egg-info
 	rm -rf .coverage
 	rm -rf .tox
 	rm -rf docs/_build
@@ -35,7 +35,7 @@ test: clean
 	py.test
 
 coverage: clean
-	py.test --cov-report term-missing --cov=numberwang tests/
+	py.test --cov-report term-missing --cov=hello1234 tests/
 
 check: clean pep8 pyflakes coverage
 
@@ -45,7 +45,7 @@ package: check
 
 publish: package
 	@echo "\nPackaging complete... Uploading to PyPi..."
-	twine upload --sign dist/*
+	twine upload dist/*
 
 docs: clean
 	$(MAKE) -C docs html
