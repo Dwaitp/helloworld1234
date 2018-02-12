@@ -4,6 +4,8 @@ A hello world module
 
 import sys
 
+__version__ = '0.0.1'
+
 def hello(name='World'):
     """
     Return a greeting for a given name.
